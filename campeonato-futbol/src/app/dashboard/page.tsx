@@ -17,7 +17,7 @@ export default async function Dashboard() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">
-              <Trophy className="text-emerald-600 w-6 h-6" />
+              <Trophy className="text-blue-600 w-6 h-6" />
               <span>Hola, {user.email?.split('@')[0] || "Usuario"}</span>
             </h1>
             <form action={async () => {
@@ -47,7 +47,7 @@ export default async function Dashboard() {
           </div>
           <Link 
             href="/admin/nuevo" 
-            className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+            className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             <Plus className="w-5 h-5" />
             Crear Nuevo Campeonato
@@ -61,7 +61,7 @@ export default async function Dashboard() {
               <Trophy className="w-12 h-12 text-gray-300 mx-auto mb-3" />
               <h3 className="text-lg font-medium text-gray-900">No tienes torneos</h3>
               <p className="text-gray-500 text-sm mt-1 mb-4">Empieza creando tu primer campeonato ahora.</p>
-              <Link href="/admin/nuevo" className="text-emerald-600 font-medium hover:underline">Crear campeonato →</Link>
+              <Link href="/admin/nuevo" className="text-blue-600 font-medium hover:underline">Crear campeonato →</Link>
             </div>
           ) : (
             tournaments?.map(t => (
@@ -70,9 +70,9 @@ export default async function Dashboard() {
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-bold text-lg text-gray-800 line-clamp-1">{t.name}</h3>
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${
-                      t.status === "draft" ? "bg-gray-100 text-gray-700 border-gray-200" : 
-                      t.status === "active" ? "bg-emerald-50 text-emerald-700 border-emerald-200" : 
-                      "bg-blue-50 text-blue-700 border-blue-200"
+                      t.status === "draft" ? "bg-yellow-100 text-yellow-800 border-yellow-200" : 
+                      t.status === "active" ? "bg-blue-100 text-blue-800 border-blue-200" : 
+                      "bg-gray-100 text-gray-800 border-gray-200"
                     }`}>
                       {t.status === "draft" ? "Borrador" : t.status === "active" ? "Activo" : "Finalizado"}
                     </span>
@@ -87,7 +87,7 @@ export default async function Dashboard() {
                 <div className="bg-gray-50 border-t border-gray-100 p-3 px-5 flex items-center justify-between gap-3">
                   <Link 
                     href={`/c/${t.slug}`} 
-                    className="text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors"
+                    className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
                   >
                     Ver público
                   </Link>

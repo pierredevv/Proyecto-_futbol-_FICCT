@@ -29,7 +29,7 @@ export default function AuthPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <div className="bg-emerald-600 p-4 rounded-2xl shadow-lg shadow-emerald-600/20">
+          <div className="bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-600/20">
             <Trophy className="w-10 h-10 text-white" />
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function AuthPage() {
                 <input
                   type="email"
                   required
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-gray-50 focus:bg-white"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-gray-50 focus:bg-white"
                   placeholder="tu@correo.com"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
@@ -75,7 +75,7 @@ export default function AuthPage() {
                   type="password"
                   required
                   minLength={6}
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-gray-50 focus:bg-white"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-gray-50 focus:bg-white"
                   placeholder="••••••••"
                   value={password}
                   onChange={e => setPassword(e.target.value)}
@@ -102,7 +102,7 @@ export default function AuthPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all disabled:opacity-70"
+                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:opacity-70"
               >
                 {isLoading ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -129,7 +129,7 @@ export default function AuthPage() {
             <div className="mt-6 text-center">
               <button
                 onClick={() => setIsRegister(!isRegister)}
-                className="text-sm font-medium text-emerald-600 hover:text-emerald-500 transition-colors"
+                className="text-sm font-medium text-blue-600 hover:text-blue-500 transition-colors"
               >
                 {isRegister ? "¿Ya tienes cuenta? Inicia sesión aquí" : "¿No tienes cuenta? Regístrate ahora"}
               </button>
